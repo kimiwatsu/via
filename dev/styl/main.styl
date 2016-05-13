@@ -1,0 +1,185 @@
+//-----------GENERAL STYLES ----------------
+centerY()
+	top 50%
+	transform: translateY(-50%)
+	-webkit-transform: translateY(-50%)
+
+centerX()
+	left 50%
+	transform: translateX(-50%)
+	-webkit-transform: translateX(-50%)
+
+centerXY()
+	top 50%
+	left 50%
+	transform: translateX(-50%) translateY(-50%)
+	-webkit-transform: translateX(-50%) translateY(-50%)
+*
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+
+html, html a 
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+a
+	img
+		border 0
+	
+body
+	background-color #F0F0F0
+	margin 0
+	padding 0
+	width 100%
+	heigth 100%
+	font-size 18px
+	color #444
+	font-family Arial
+
+//-----------STYLES FOR HEADER----------------
+	#header
+		text-align left
+		background-color #fff
+		width 100%
+		.title
+			max-width 980px
+			width 100%
+			position relative
+			centerX()
+			font-size 24px
+			padding 20px 0 0 10px
+			margin 0
+		#menu
+			max-width 980px
+			width 100%
+			position relative
+			centerX()
+			font-size 15px
+			ul
+				padding 30px 0 12px 0
+				margin 0
+				list-style none
+				li
+					display inline
+					padding 0 10px 13px
+			a
+				color #444
+				text-decoration none
+				&:hover
+					color #2C9CA6
+					border-bottom 2px solid #2C9CA6
+					padding-bottom 10px
+				
+//-----------STYLES FOR CONTENT----------------
+	#content
+		text-align center
+		background-color #F0F0F0
+		border-top 1px solid #ddd
+		padding-top 4px
+		#search
+			.desk
+				display block
+				width 100%
+			.mob
+				display none
+			h2
+				padding 30px 0 8px 0
+				text-transform uppercase
+				color #FFF
+				font-size 30px
+				margin 0
+			p
+				margin 0
+				color #FFF
+				font-size 14px
+		
+
+//-----------STYLES FOR HIGHLITHS----------------
+	#highliths
+		text-align center
+		background-color #F0F0F0
+		padding 40px 0 100px 0
+		margin 0 auto
+		display table
+		.colum
+			background-color #F0F0F0
+			float left
+			display table-cell
+			margin-left 10px
+			width 24%
+			a
+				img
+					display block
+					margin-bottom 10px
+					max-width 282px
+					width 100%
+					
+
+//-----------MEDIA QUERY----------------
+@media only screen and (max-width:1020px)
+	body
+		#header
+			display none
+		#content
+			#search
+				.desk
+					display none
+				.mob
+					display block
+					width 100%
+		#highliths
+			.colum
+				width 32%
+			.last
+				display none
+@media only screen and (max-width:770px)
+	body
+			
+		#highliths
+			.colum
+				width 48%
+				a
+					img
+						max-width 100%
+			.three
+				width 100%
+				a
+					img
+						float left
+						margin-right 10px
+						max-width 48%
+						width 48%
+
+@media only screen and (max-width:600px)
+	body
+			
+		#highliths
+			.colum
+				width 47%
+			.three
+				width 100%
+				a
+					img
+						max-width 47%
+						width 47%
+						
+@media only screen and (max-width:350px)
+	body
+			
+		#highliths
+			.colum
+				margin 0
+				width 100%
+				display block
+				float none
+				a
+					img
+						max-width 100%
+			.three
+				a
+					img
+						max-width 100%
+						width 100%
+			
+				
+
